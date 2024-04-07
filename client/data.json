@@ -1,0 +1,17 @@
+{
+  "about": {
+    "title": "About $CLAWFACE",
+    "desc": "Welcome to ClawCoin, the premier meme token reigning over the Solana network with the stealth and charm of a mischievous feline. Led by our esteemed mascot, Whisker the Wise, we embark on a whisker-twitching journey beyond the ordinary, embodying the playful spirit of crypto culture. With Whisker's cunning guidance, our community thrives on the principles of curiosity and innovation, pawing at the boundaries of convention with every graceful stride. As the top cat of meme tokens on Solana, ClawCoin defies expectations, transcending gravity itself as we leap to new heights of hilarity and prosperity within the decentralized landscape. Join us as we chase the laser pointer of success, leaving a trail of memes and whiskers in our wake. Together, let's disrupt the meme token space, one purr-fect transaction at a time!",
+    "bg": "#00FFA3"
+  },
+  "mission": {
+    "title": "🐾 Mission Statement 🐾",
+    "desc": "Welcome to ClawCoin, the premier meme token reigning over the Solana network with the stealth and charm of a mischievous feline. Led by our esteemed mascot, Whisker the Wise, we embark on a whisker-twitching journey beyond the ordinary, embodying the playful spirit of crypto culture. With Whisker's cunning guidance, our community thrives on the principles of curiosity and innovation, pawing at the boundaries of convention with every graceful stride. As the top cat of meme tokens on Solana, ClawCoin defies expectations, transcending gravity itself as we leap to new heights of hilarity and prosperity within the decentralized landscape. Join us as we chase the laser pointer of success, leaving a trail of memes and whiskers in our wake. Together, let's disrupt the meme token space, one purr-fect transaction at a time!",
+    "bg": "#03E1FF"
+  },
+  "meme": {
+    "title": "Join Our Community",
+    "desc": "Welcome to ClawCoin, the premier meme token reigning over the Solana network with the stealth and charm of a mischievous feline. Led by our esteemed mascot, Whisker the Wise, we embark on a whisker-twitching journey beyond the ordinary, embodying the playful spirit of crypto culture. With Whisker's cunning guidance, our community thrives on the principles of curiosity and innovation, pawing at the boundaries of convention with every graceful stride. As the top cat of meme tokens on Solana, ClawCoin defies expectations, transcending gravity itself as we leap to new heights of hilarity and prosperity within the decentralized landscape. Join us as we chase the laser pointer of success, leaving a trail of memes and whiskers in our wake. Together, let's disrupt the meme token space, one purr-fect transaction at a time!",
+    "bg": "#DC1FFF"
+  }
+}
