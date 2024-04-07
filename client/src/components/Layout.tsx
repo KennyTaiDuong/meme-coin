@@ -3,9 +3,9 @@ import { Header } from "./Header";
 import { BodySection } from "./BodySection";
 import Data from "../../data.json"
 
-import AboutImage from "../assets/pfp/cat3.jpeg"
-import MissionImage from "../assets/pfp/cat1.jpeg"
-import MemeImage from "../assets/pfp/cat2.jpeg"
+import AboutImage from "../assets/pfp/aboutimage.png"
+import MissionImage from "../assets/pfp/missionimage.png"
+import { MemeCarousel } from "./MemeCarousel";
 
 const Container = styled.div`
 
@@ -15,8 +15,21 @@ const StyledMain = styled.main`
   margin-top: 12rem;
 `
 
+const MemeSection = styled.div`
+  width: 100%;
+  background-color: #DC1FFF;
+  display: flex;
+  flex-direction: column;
+`
+
+const Title = styled.p`
+  font-family: "Luckiest Guy", cursive;
+  font-size: 3.5rem;
+  margin: 0 auto;
+`
+
 export const Layout = () => {
-  const {about, mission, meme} = Data
+  const {about, mission } = Data
 
   return (
     <Container>
@@ -24,7 +37,12 @@ export const Layout = () => {
       <StyledMain>
         <BodySection id={1} img={AboutImage} title={about.title} desc={about.desc} bg={about.bg} />
         <BodySection id={2} img={MissionImage} title={mission.title} desc={mission.desc} bg={mission.bg} />
-        <BodySection id={3} img={MemeImage} title={meme.title} desc={meme.desc} bg={meme.bg}/>
+        <MemeSection>
+          <Title>CLAWFACE MEMES</Title>
+          <>
+            <MemeCarousel />
+          </>
+        </MemeSection>
       </StyledMain>
     </Container>
   )

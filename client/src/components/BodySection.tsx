@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { MemeSection } from "./MemeSection";
 
 const Container = styled.div`
   background-color: rgb(255, 255, 255);
@@ -18,6 +17,8 @@ const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  gap: 1rem;
 `
 
 const Title = styled.p`
@@ -27,11 +28,18 @@ const Title = styled.p`
 
 const Description = styled.p`
   max-width: 80ch;
+  text-align: center;
+  line-height: 1.5rem;
+  background-color: white;
+  color: #2c2c2c;
+  border-radius: 1rem;
+  padding: 1rem;
 `
 
 const Image = styled.img`
   width: 25rem;
   border-radius: 1rem;
+  border: 3px solid black;
 `
 
 interface BodySectionProps {
@@ -44,25 +52,17 @@ interface BodySectionProps {
 
 export const BodySection = ({ img, title, desc, bg, id }: BodySectionProps) => {
   
-  return (id !== 3 ? (
-      <Container style={{ backgroundColor: `${bg}`, flexDirection: `${id % 2 === 0 ? "row" : "row-reverse"}`}}>
-        <TextContainer>
-          <Title>{title}</Title>
-          <Description>
-            {desc}
-          </Description>
-        </TextContainer>
-        <ImageContainer>
-          <Image src={img} />
-        </ImageContainer>
-      </Container>
-    ) : (
-      <Container style={{ backgroundColor: `${bg}`, flexDirection: `${id % 2 === 0 ? "row" : "row-reverse"}`}}>
-        <MemeSection />
-        <TextContainer>
-          <Title>{title}</Title>
-        </TextContainer>
-      </Container>
-    )
-  )
+  return (
+    <Container style={{ backgroundColor: `${bg}`, flexDirection: `${id % 2 === 0 ? "row" : "row-reverse"}`}}>
+      <TextContainer>
+        <Title>{title}</Title>
+        <Description >
+          {desc}
+        </Description>
+      </TextContainer>
+      <ImageContainer>
+        <Image src={img} />
+      </ImageContainer>
+    </Container>
+  ) 
 }

@@ -37,6 +37,7 @@ const HeaderContainer = styled.div`
   z-index: 2;
   background-color: white;
   display: flex;
+  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
 `
 
 const LogoContainer = styled(NavLink)`
