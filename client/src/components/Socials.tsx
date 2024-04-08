@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 import TelegramLogo from "../assets/logo/telegram.png"
 import XLogo from "../assets/logo/x.png"
 import DexLogo from "../assets/logo/dexscreener.png"
+import PumpFunLogo from "../assets/logo/pumpfun.png"
 
 const Container = styled.div`
   display: flex;
@@ -38,6 +39,9 @@ export const Socials = () => {
         <Logo src={TelegramLogo} />
       </StyledNavLink>
       <StyledNavLink to={""} target="_blank">
+        <Logo src={DexLogo} style={{ borderRadius: "50%"}}/>
+      </StyledNavLink>
+      <StyledNavLink to={"https://www.pump.fun/F2qGcuFWNPQPzSY3wC1mXgU2CpEbJTibbx3T2CZ8koBm"} target="_blank">
         <Logo src={DexLogo} style={{ borderRadius: "50%"}}/>
       </StyledNavLink>
     </Container>
