@@ -119,7 +119,7 @@ const Title = styled.p`
 `;
 
 const ContractToken = styled.p`
-  font-size: 1rem;
+  font-size: 0.75rem;
   font-weight: 700;
   text-align: center;
 `
@@ -129,7 +129,7 @@ export const Header = () => {
     <Container>
       <MobileContainer>
         <ContractToken>
-          Contract: 0x000000000000000000
+          Token: 7RSDdX9X16NdKaamTwtxJCQYmF3ShTZn7egYUesteM6K
         </ContractToken>
       </MobileContainer>
       <HeaderContainer>
@@ -140,7 +140,7 @@ export const Header = () => {
           <Title>$CLAWFACE</Title>
           <BigScreenContainer>
             <ContractToken>
-              Contract: 0x000000000000000000
+              Token: 7RSDdX9X16NdKaamTwtxJCQYmF3ShTZn7egYUesteM6K
             </ContractToken>
           </BigScreenContainer>
         </BannerContainer>
