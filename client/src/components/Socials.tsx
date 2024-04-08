@@ -42,7 +42,7 @@ export const Socials = () => {
         <Logo src={DexLogo} style={{ borderRadius: "50%"}}/>
       </StyledNavLink>
       <StyledNavLink to={"https://www.pump.fun/F2qGcuFWNPQPzSY3wC1mXgU2CpEbJTibbx3T2CZ8koBm"} target="_blank">
-        <Logo src={DexLogo} style={{ borderRadius: "50%"}}/>
+        <Logo src={PumpFunLogo} />
       </StyledNavLink>
     </Container>
   )
