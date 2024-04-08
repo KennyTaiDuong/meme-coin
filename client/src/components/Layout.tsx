@@ -6,6 +6,7 @@ import Data from "../../data.json"
 import AboutImage from "../assets/pfp/aboutimage.png"
 import MissionImage from "../assets/pfp/missionimage.png"
 import { MemeCarousel } from "./MemeCarousel";
+import { Footer } from "./Footer";
 
 const Container = styled.div`
 
@@ -13,6 +14,14 @@ const Container = styled.div`
 
 const StyledMain = styled.main`
   margin-top: 12rem;
+
+  @media screen and (max-width: 575px) {
+    margin-top: 10rem;
+  }
+
+  @media screen and (min-width: 576px) and (max-width: 925px) {
+    margin-top: 7rem;
+  }
 `
 
 const MemeSection = styled.div`
@@ -26,6 +35,11 @@ const Title = styled.p`
   font-family: "Luckiest Guy", cursive;
   font-size: 3.5rem;
   margin: 0 auto;
+  padding: 2rem 0;
+
+  @media screen and (max-width: 925px) {
+    font-size: 2rem;
+  }
 `
 
 export const Layout = () => {
@@ -44,6 +58,7 @@ export const Layout = () => {
           </>
         </MemeSection>
       </StyledMain>
+      <Footer />
     </Container>
   )
 }
