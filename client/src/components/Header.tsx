@@ -32,6 +32,7 @@ const Container = styled.div`
   top: 0;
   left: 0;
   right: 0;
+  z-index: 3;
   background-color: white;
 `
 
@@ -54,7 +55,6 @@ const BigScreenContainer = styled.div`
 const HeaderContainer = styled.div`
   width: 100%;
   padding: 2rem;
-  z-index: 2;
   display: flex;
   justify-content: space-between;
   box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
@@ -147,6 +147,5 @@ export const Header = () => {
         <Socials />
       </HeaderContainer>
     </Container>
-
   )
 }

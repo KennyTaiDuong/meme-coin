@@ -73,12 +73,13 @@ export const MemeCarousel: React.FC = () => {
     <MemeContainer>
       <Carousel 
         responsive={responsive}
-        arrows
+        arrows={false}
         autoPlay={true}
         autoPlaySpeed={1500}
         partialVisible={true}
         pauseOnHover
         infinite
+        containerClass="carousel-container"
       >
         <ImageContainer >
           <StyledImg src={CatImage} alt={`Item`} />
