@@ -22,7 +22,11 @@ import MemeFifteen from "../assets/memes/meme15.png"
 import MemeSixteen from "../assets/memes/meme16.png"
 
 const MemeContainer = styled.div`
+  padding: 2rem;
 
+  @media screen and (max-width: 575px) {
+    padding: 1rem;
+  }
 `
 
 const ImageContainer = styled.div`
@@ -31,6 +35,10 @@ const ImageContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media screen and (max-width: 575px) {
+    padding: .5rem;
+  }
 `;
 
 const StyledImg = styled.img`
