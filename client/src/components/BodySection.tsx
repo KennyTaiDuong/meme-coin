@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { useState, useEffect } from "react";
 
 const Container = styled.div`
   background-color: rgb(255, 255, 255);
@@ -7,6 +8,11 @@ const Container = styled.div`
   display: flex;
   justify-content: space-around;
   gap: 2rem;
+
+  @media screen and (max-width: 925px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `
 
 const ImageContainer = styled.div`
@@ -24,6 +30,10 @@ const TextContainer = styled.div`
 const Title = styled.p`
   font-family: "Luckiest Guy", cursive;
   font-size: 3.5rem;
+
+  @media screen and (max-width: 925px) {
+    font-size: 2rem;
+  }
 `
 
 const Description = styled.p`
@@ -40,6 +50,11 @@ const Image = styled.img`
   width: 25rem;
   border-radius: 1rem;
   border: 3px solid black;
+
+  @media screen and (max-width: 925px) {
+    max-width: 80ch;
+    width: 100%;
+  }
 `
 
 interface BodySectionProps {
@@ -52,8 +67,27 @@ interface BodySectionProps {
 
 export const BodySection = ({ img, title, desc, bg, id }: BodySectionProps) => {
   
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  const handleResize = () => {
+    setWindowWidth(window.innerWidth);
+  };
+
+  useEffect(() => {
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  const FlexDirection = windowWidth <= 925 
+    ? "column" 
+    : id % 2 === 0 ? "row"
+    : "row-reverse"
+
   return (
-    <Container style={{ backgroundColor: `${bg}`, flexDirection: `${id % 2 === 0 ? "row" : "row-reverse"}`}}>
+    <Container style={{ backgroundColor: `${bg}`, flexDirection: `${FlexDirection}`}}>
       <TextContainer>
         <Title>{title}</Title>
         <Description >

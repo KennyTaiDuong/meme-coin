@@ -40,8 +40,13 @@ const StyledImg = styled.img`
 
 const responsive = {
   desktop: {
-    breakpoint: { max: 3000, min: 0 },
+    breakpoint: { max: 3000, min: 925 },
     items: 5,
+    slidesToSlide: 1 
+  },
+  mobile: {
+    breakpoint: { max: 925, min: 0 },
+    items: 3,
     slidesToSlide: 1 
   }
 };

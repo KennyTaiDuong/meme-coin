@@ -10,6 +10,10 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   gap: 2rem;
+
+  @media screen and (max-width: 925px) {
+    gap: 1rem;
+  }
 `
 
 const StyledNavLink = styled(NavLink)`
@@ -18,6 +22,10 @@ const StyledNavLink = styled(NavLink)`
 
 const Logo = styled.img`
   width: 4rem;
+
+  @media screen and (max-width: 925px) {
+    width: 3rem;
+  }
 `
 
 export const Socials = () => {

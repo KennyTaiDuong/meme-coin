@@ -27,17 +27,45 @@ const colorFade = keyframes`
   }
 `;
 
-const HeaderContainer = styled.div`
-  width: 100%;
-  padding: 2rem;
+const Container = styled.div`
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 2;
   background-color: white;
+`
+
+const MobileContainer = styled.div`
+  display: none;
+  @media screen and (max-width: 575px) {
+    display: block;
+    padding-top: 1rem;
+  }
+`
+
+const BigScreenContainer = styled.div`
+  display: block;
+  
+  @media screen and (max-width: 575px) {
+    display: none;
+  }
+`
+
+const HeaderContainer = styled.div`
+  width: 100%;
+  padding: 2rem;
+  z-index: 2;
   display: flex;
+  justify-content: space-between;
   box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+
+  @media screen and (max-width: 925px)  {
+    padding: 1rem;
+  }
+
+  @media screen and (max-width: 575px) {
+    flex-direction: column;
+  }
 `
 
 const LogoContainer = styled(NavLink)`
@@ -46,10 +74,14 @@ const LogoContainer = styled(NavLink)`
   color: rgb(0,0,0);
   align-items: center;
   justify-content: space-between;
+
+  @media screen and (max-width: 575px){
+    display: none;
+  }
 `
 
 const BannerContainer = styled.div`
-  width: 100%;
+  
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -63,6 +95,11 @@ const Logo = styled.img`
   transition: all 1s ease-in-out;
   height: 8rem; 
   width: 8rem;
+
+  @media screen and (max-width: 925px) {
+    width: 5rem;
+    height: 5rem;
+  }
 `
 
 const Title = styled.p`
@@ -75,25 +112,41 @@ const Title = styled.p`
   color: transparent;
   -webkit-text-fill-color: transparent;
   animation: ${colorFade} 5s infinite linear;
+
+  @media screen and (max-width: 925px) {
+    font-size: 3rem;
+  }
 `;
 
 const ContractToken = styled.p`
-
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
 `
 
 export const Header = () => {
   return (
-    <HeaderContainer>
-      <LogoContainer to={""}>
-        <Logo src={CatLogo} />
-      </LogoContainer>
+    <Container>
+      <MobileContainer>
+        <ContractToken>
+          Contract: 0x000000000000000000
+        </ContractToken>
+      </MobileContainer>
+      <HeaderContainer>
+        <LogoContainer to={""}>
+          <Logo src={CatLogo} />
+        </LogoContainer>
         <BannerContainer>
           <Title>$CLAWFACE</Title>
-          <ContractToken>
-            Contract: 0x000000000000000000
-          </ContractToken>
+          <BigScreenContainer>
+            <ContractToken>
+              Contract: 0x000000000000000000
+            </ContractToken>
+          </BigScreenContainer>
         </BannerContainer>
         <Socials />
-    </HeaderContainer>
+      </HeaderContainer>
+    </Container>
+
   )
 }
