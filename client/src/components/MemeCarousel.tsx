@@ -20,6 +20,7 @@ import MemeThirteen from "../assets/memes/meme13.png"
 import MemeFourteen from "../assets/memes/meme14.png"
 import MemeFifteen from "../assets/memes/meme15.png"
 import MemeSixteen from "../assets/memes/meme16.png"
+import CatPaw from "../assets/pfp/catpaw.png"
 
 const MemeContainer = styled.div`
   padding: 2rem;
@@ -65,6 +66,8 @@ const responsive = {
 };
 
 export const MemeCarousel: React.FC = () => {
+
+  const Cat = `${CatPaw}`
 
   return (
     <MemeContainer>
