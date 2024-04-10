@@ -41,8 +41,8 @@ export const Layout = () => {
     <Container>
       <Header />
       <StyledMain>
-        <BodySection id={1} img={AboutImage} title={about.title} desc={about.desc} bg={about.bg} />
-        <BodySection id={2} img={MissionImage} title={mission.title} desc={mission.desc} bg={mission.bg} />
+        <BodySection id={1} img={AboutImage} title={about.title} desc={about.desc} />
+        <BodySection id={2} img={MissionImage} title={mission.title} desc={mission.desc} />
         <MemeSection>
           <Title>DogWIFNoBrim</Title>
           <>

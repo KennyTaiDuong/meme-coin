@@ -60,7 +60,6 @@ interface BodySectionProps {
   img: string;
   title: string;
   desc: string;
-  bg: string;
   id: number;
 }
 
