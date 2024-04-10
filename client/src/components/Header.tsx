@@ -18,15 +18,6 @@ const morphAnimation = keyframes`
   }
 `
 
-const colorFade = keyframes`
-  0% {
-    background-position: left bottom;
-  }
-  100% {
-    background-position: right bottom;
-  }
-`;
-
 const Container = styled.div`
   
   background-color: transparent;
