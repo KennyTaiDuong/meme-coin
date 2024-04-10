@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { useState, useEffect } from "react";
 
 const Container = styled.div`
-  background-color: rgb(255, 255, 255);
   color: white;
   padding: 2rem;
   display: flex;
@@ -49,7 +48,7 @@ const Description = styled.p`
 const Image = styled.img`
   width: 25rem;
   border-radius: 1rem;
-  border: 3px solid black;
+  box-shadow: 0px 0px 20px white;
 
   @media screen and (max-width: 925px) {
     max-width: 80ch;
@@ -65,7 +64,7 @@ interface BodySectionProps {
   id: number;
 }
 
-export const BodySection = ({ img, title, desc, bg, id }: BodySectionProps) => {
+export const BodySection = ({ img, title, desc, id }: BodySectionProps) => {
   
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
@@ -87,7 +86,7 @@ export const BodySection = ({ img, title, desc, bg, id }: BodySectionProps) => {
     : "row-reverse"
 
   return (
-    <Container style={{ backgroundColor: `${bg}`, flexDirection: `${FlexDirection}`}}>
+    <Container style={{ flexDirection: `${FlexDirection}`}}>
       <TextContainer>
         <Title>{title}</Title>
         <Description >

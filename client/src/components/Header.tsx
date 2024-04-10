@@ -1,7 +1,7 @@
 import styled, {keyframes} from "styled-components";
 import { NavLink } from "react-router-dom";
 
-import CatLogo from "../assets/pfp/mainlogo.jpeg"
+import DogLogo from "../assets/pfp/dogwifnobrim.jpg"
 import { Socials } from "./Socials";
 
 const morphAnimation = keyframes`
@@ -28,12 +28,8 @@ const colorFade = keyframes`
 `;
 
 const Container = styled.div`
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 3;
-  background-color: white;
+  
+  background-color: transparent;
 `
 
 const MobileContainer = styled.div`
@@ -57,7 +53,6 @@ const HeaderContainer = styled.div`
   padding: 2rem;
   display: flex;
   justify-content: space-between;
-  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
 
   @media screen and (max-width: 925px)  {
     padding: 1rem;
@@ -106,12 +101,7 @@ const Title = styled.p`
   font-size: 5rem;
   font-family: "Luckiest Guy", cursive;
   font-weight: 700;
-  background-image: linear-gradient(to right, #00FFA3, #03E1FF, #DC1FFF);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  -webkit-text-fill-color: transparent;
-  animation: ${colorFade} 5s infinite linear;
+  color: white;
 
   @media screen and (max-width: 925px) {
     font-size: 3rem;
@@ -122,6 +112,7 @@ const ContractToken = styled.p`
   font-size: 0.75rem;
   font-weight: 700;
   text-align: center;
+  color: white;
 `
 
 export const Header = () => {
@@ -129,18 +120,18 @@ export const Header = () => {
     <Container>
       <MobileContainer>
         <ContractToken>
-          Token: 7RSDdX9X16NdKaamTwtxJCQYmF3ShTZn7egYUesteM6K
+          Token: 7wAsimKAsLhEkbyCgVaSBFy2CM26ehvAPP6fKwQtmn7C
         </ContractToken>
       </MobileContainer>
       <HeaderContainer>
         <LogoContainer to={""}>
-          <Logo src={CatLogo} />
+          <Logo src={DogLogo} />
         </LogoContainer>
         <BannerContainer>
-          <Title>$CLAWFACE</Title>
+          <Title>$DWIFNB</Title>
           <BigScreenContainer>
             <ContractToken>
-              Token: 7RSDdX9X16NdKaamTwtxJCQYmF3ShTZn7egYUesteM6K
+              Token: 7wAsimKAsLhEkbyCgVaSBFy2CM26ehvAPP6fKwQtmn7C
             </ContractToken>
           </BigScreenContainer>
         </BannerContainer>

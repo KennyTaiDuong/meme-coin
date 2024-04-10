@@ -2,25 +2,14 @@ import styled from "styled-components";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
-import CatImage from "../assets/pfp/cat2.jpeg"
 
-import MemeOne from "../assets/memes/meme1.jpg"
-import MemeTwo from "../assets/memes/meme17.png"
-import MemeThree from "../assets/memes/meme18.png"
-import MemeFour from "../assets/memes/meme4.png"
-import MemeFive from "../assets/memes/meme5.png"
-import MemeSix from "../assets/memes/meme6.png"
-import MemeSeven from "../assets/memes/meme7.png"
-import MemeEight from "../assets/memes/meme8.png"
-import MemeNine from "../assets/memes/meme9.png"
-import MemeTen from "../assets/memes/meme10.png"
-import MemeEleven from "../assets/memes/meme11.png"
-import MemeTwelve from "../assets/memes/meme12.png"
-import MemeThirteen from "../assets/memes/meme13.png"
-import MemeFourteen from "../assets/memes/meme14.png"
-import MemeFifteen from "../assets/memes/meme15.png"
-import MemeSixteen from "../assets/memes/meme16.png"
-import CatPaw from "../assets/pfp/catpaw.png"
+import MemeOne from "../assets/memes/meme_one.png"
+import MemeTwo from "../assets/memes/meme_two.png"
+import MemeThree from "../assets/memes/meme_three.png"
+import MemeFour from "../assets/memes/meme_four.png"
+import MemeFive from "../assets/memes/meme_five.png"
+import MemeSix from "../assets/memes/meme_six.png"
+
 
 const MemeContainer = styled.div`
   padding: 2rem;
@@ -67,7 +56,6 @@ const responsive = {
 
 export const MemeCarousel: React.FC = () => {
 
-  const Cat = `${CatPaw}`
 
   return (
     <MemeContainer>
@@ -81,9 +69,6 @@ export const MemeCarousel: React.FC = () => {
         infinite
         containerClass="carousel-container"
       >
-        <ImageContainer >
-          <StyledImg src={CatImage} alt={`Item`} />
-        </ImageContainer>
         <ImageContainer >
           <StyledImg src={MemeOne} alt={`Item`} />
         </ImageContainer>
@@ -101,36 +86,6 @@ export const MemeCarousel: React.FC = () => {
         </ImageContainer>
         <ImageContainer >
           <StyledImg src={MemeSix} alt={`Item`} />
-        </ImageContainer>
-        <ImageContainer >
-          <StyledImg src={MemeSeven} alt={`Item`} />
-        </ImageContainer>
-        <ImageContainer >
-          <StyledImg src={MemeEight} alt={`Item`} />
-        </ImageContainer>
-        <ImageContainer >
-          <StyledImg src={MemeNine} alt={`Item`} />
-        </ImageContainer>
-        <ImageContainer >
-          <StyledImg src={MemeTen} alt={`Item`} />
-        </ImageContainer>
-        <ImageContainer >
-          <StyledImg src={MemeEleven} alt={`Item`} />
-        </ImageContainer>
-        <ImageContainer >
-          <StyledImg src={MemeTwelve} alt={`Item`} />
-        </ImageContainer>
-        <ImageContainer >
-          <StyledImg src={MemeThirteen} alt={`Item`} />
-        </ImageContainer>
-        <ImageContainer >
-          <StyledImg src={MemeFourteen} alt={`Item`} />
-        </ImageContainer>
-        <ImageContainer >
-          <StyledImg src={MemeFifteen} alt={`Item`} />
-        </ImageContainer>
-        <ImageContainer >
-          <StyledImg src={MemeSixteen} alt={`Item`} />
         </ImageContainer>
       </Carousel>
     </MemeContainer>
